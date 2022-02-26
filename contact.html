@@ -7,6 +7,8 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/27a06f0316.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>Portfolio Dorian Duboc - Contact</title>
 </head>
 
@@ -46,11 +48,57 @@
         <a href="index.html" class="btn btn-white btn-animate">Accueil</a>
     </div>
 
-    <p><a href="mailto:dorian.duboc@gmail.com">Envoyez-moi un e-mail !</a></p>
+    <div id="form-main">
+        <div id="form-div">
+            <form action="MAILTO:dorian.duboc@gmail.com" method="post" enctype="text/plain" class="form" id="form1">
 
-    <footer>
-        <p>Site web crée par Dorian Duboc 2022</p>
-    </footer>
+                <p class="name">
+                    <input name="name" type="text" class=" feedback-input" id="Name" placeholder="Nom & prénom" value="" />
+                </p>
+
+                <p class="email">
+                    <input name="email" type="text" class=" feedback-input" id="email" placeholder="Adresse mail" value="" />
+                </p>
+                <p class="Industry">
+                    <input name="Industry" type="text" class=" feedback-input" id="Industry" placeholder="Entreprise" value="" />
+                </p>
+
+                <p class="website">
+                    <input name="website" type="text" class=" feedback-input" id="website" placeholder="Site Web" value="" />
+                </p>
+
+                <p class="text">
+                    <textarea name="text" class=" feedback-input" id="comment" placeholder="Ecrivez votre message ici..." value=""></textarea>
+                </p>
+
+
+                <div class="submit">
+                    <input type="submit" value="ENVOYER" id="button-blue" />
+                    <div class="ease"></div>
+                </div>
+            </form>
+        </div>
+
+        <section>
+            <ul class="social">
+                <li>
+                    <a class="ease-all" href="mailto:dorian.duboc@gmail.com"><i class="fa-solid fa-envelope fa-fade" style="--fa-animation-duration: 3.5s; --fa-fade-opacity: 0.3;"></i><span class="hide-text"></span></a>
+                </li>
+                <li>
+                    <a class="ease-all" href="https://www.linkedin.com/in/dorian-duboc/"><i class="fa-brands fa-linkedin fa-fade" style="--fa-animation-duration: 3.5s; --fa-fade-opacity: 0.3;"></i><span class="hide-text"></span></a>
+                </li>
+                <li>
+                    <a class="ease-all" href="https://discordhub.com/profile/208337977913376768"><i class="fa-brands fa-discord fa-fade" style="--fa-animation-duration: 3.5s; --fa-fade-opacity: 0.3;"></i><span class="hide-text"></span></a>
+                </li>
+                <li>
+                    <a class="ease-all" href="https://github.com/Ziifkah"><i class="fa-brands fa-github fa-fade" style="--fa-animation-duration: 3.5s; --fa-fade-opacity: 0.3;"></i><span class="hide-text"></span></a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Site web crée par Dorian Duboc 2022</p>
+        </footer>
 
 </body>
 
