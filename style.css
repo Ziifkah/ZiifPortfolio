@@ -51,6 +51,7 @@ body {
     background: #0c0f27;
     color: whitesmoke;
     overflow: hidden;
+    font-family: 'SofiaProLight';
 }
 
 @media only screen and (max-width: 580px) {
@@ -73,6 +74,33 @@ body {
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
     animation: animate 33s linear infinite;
+}
+
+@media screen and (max-width:640px) {
+    .batas-downx {
+        float: none;
+        width: 100%
+    }
+}
+
+@media screen and (max-width:320px) {
+    .file-info {
+        display: block;
+        text-align: center
+    }
+    #btnx,
+    #downloadx {
+        width: 100%;
+        margin-bottom: 10px
+    }
+    .bungkus-info span {
+        float: none;
+        width: 100%;
+        text-align: center
+    }
+    .file-deskripsi {
+        text-align: center
+    }
 }
 
 
@@ -682,8 +710,8 @@ div.highlightTextIn a:before {
 
 section.cv {
     position: absolute;
-    left: 0%;
-    bottom: 0%;
+    left: 10%;
+    bottom: -10%;
     width: 100%;
     height: 100%;
 }
@@ -758,10 +786,13 @@ div.cvpdf {
     animation-fill-mode: backwards;
 }
 
+
+/*Section telechargement page telechargement*/
+
 section.telechargement {
     position: absolute;
-    top: 20%;
-    left: 37%;
+    bottom: 25%;
+    left: 45%;
     font-family: 'SofiaProLight', Arial, serif;
     color: whitesmoke;
 }
@@ -942,6 +973,7 @@ input#img-10:checked~.nav-dots label#img-dot-15 {
     margin-left: -260px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
+    border-radius: 0%;
 }
 
 .feedback-input {
@@ -1087,6 +1119,7 @@ section {
     margin-left: -210px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
+    border-radius: 0%;
 }
 
 
@@ -1114,10 +1147,9 @@ section {
 }
 
 .social li a {
-    display: inline-block;
     float: left;
     width: 40px;
-    height: 28px;
+    height: 33px;
     margin-right: 4rem;
     text-align: center;
     padding-top: 13px;
@@ -1142,6 +1174,139 @@ section {
     -ms-box-shadow: inset 0 0 0 3px #222;
     box-shadow: inset 0 0 0 3px #222;
     color: #222;
+}
+
+
+/*Section telechargement box1 page telechargement*/
+
+.containertest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    position: relative;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 12.5rem;
+    height: 17rem;
+    margin: 0.2rem 1.5rem;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 35px;
+    box-shadow: 3px 3px 5px #eee;
+    top: 0;
+    transition: 0.3s;
+}
+
+.box:hover {
+    box-shadow: 3px 3px 5px whitesmoke;
+    top: -5px;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    margin: 1rem auto 0;
+    opacity: 0.9;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.box:hover img {
+    animation: box 0.5s linear infinite alternate;
+    opacity: 1;
+}
+
+@keyframes box {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -5px;
+    }
+}
+
+.name {
+    color: #546e7a;
+    text-align: center;
+    margin: 1rem 0;
+    cursor: default;
+    transition: 0.3s;
+}
+
+.box:hover .name {
+    color: #455a64;
+}
+
+
+/* gray border in box */
+
+.box .name::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 31px;
+    border-top: 1px solid #ccc;
+    margin: auto;
+    width: 160px;
+}
+
+
+/* hover border in box */
+
+.box .name::after {
+    content: "";
+    border-top: 1px solid #fa6f8f;
+    border-radius: 1px;
+    display: block;
+    margin: auto;
+    width: 160px;
+    position: relative;
+    top: 8px;
+    transition: 0.3s;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.box:hover .name::after {
+    content: "";
+    transform: scaleX(1);
+}
+
+.caption {
+    margin: 0 0.5rem;
+    font-weight: bold;
+    color: #0d8da2;
+    text-align: center;
+    cursor: default;
+}
+
+.download {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    color: #326885;
+    background-color: #ced;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: -52px;
+    transition: 0.3s;
+}
+
+.box:hover .download {
+    bottom: -13px;
 }
 
 
